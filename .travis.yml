@@ -1,0 +1,15 @@
+language: ruby
+
+services:
+  - mysql
+
+rvm:
+  - 2.3.0
+
+before_install:
+  - gem install bundler -v 1.11.2
+  - bundle install
+  - RAILS_ENV=test bundle exec rake db:create
+  - RAILS_ENV=test bundle exec rake db:migrate
+
+script: RAILS_ENV=test bundle exec rake
