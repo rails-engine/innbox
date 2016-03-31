@@ -1,24 +1,38 @@
-# innbox
+# mails
 
 Mountable Personal Messaging Engine for any Rails application.
 
-[![Gem Version](https://badge.fury.io/rb/innbox.svg)](https://badge.fury.io/rb/innbox) [![Build Status](https://travis-ci.org/rails-engine/innbox.svg)](https://travis-ci.org/rails-engine/innbox) [![Code Climate](https://codeclimate.com/github/rails-engine/innbox/badges/gpa.svg)](https://codeclimate.com/github/rails-engine/innbox) [![codecov.io](https://codecov.io/github/rails-engine/innbox/coverage.svg?branch=master)](https://codecov.io/github/rails-engine/innbox?branch=master) [![](http://inch-ci.org/github/rails-engine/innbox.svg?branch=master)](http://inch-ci.org/github/rails-engine/innbox?branch=master)
+[![Gem Version](https://badge.fury.io/rb/mails.svg)](https://badge.fury.io/rb/mails) [![Build Status](https://travis-ci.org/rails-engine/mails.svg)](https://travis-ci.org/rails-engine/mails) [![Code Climate](https://codeclimate.com/github/rails-engine/mails/badges/gpa.svg)](https://codeclimate.com/github/rails-engine/mails) [![codecov.io](https://codecov.io/github/rails-engine/mails/coverage.svg?branch=master)](https://codecov.io/github/rails-engine/mails?branch=master) [![](http://inch-ci.org/github/rails-engine/mails.svg?branch=master)](http://inch-ci.org/github/rails-engine/mails?branch=master)
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'innbox'
+gem 'mails'
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Now you have the generators available in Rails application:
 
-    $ gem install innbox
+```bash
+$ rails g mails:install
+```
+
+You can also generate views and controller if you need to customize them:
+
+```bash
+$ rails g mails:views
+$ rails g mails:controllers
+```
+Then mount it in routes.rb
+
+```ruby
+mount Mails::Engine, at: "/mails"
+```
 
 ## Usage
 
@@ -32,4 +46,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/innbox. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.

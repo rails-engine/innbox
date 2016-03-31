@@ -1,16 +1,16 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'innbox/version'
+require 'mails/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "innbox"
-  spec.version       = Innbox::VERSION
+  spec.name          = "mails"
+  spec.version       = Mails::VERSION
   spec.authors       = ["P.S.V.R"]
   spec.email         = ["pmq2001@gmail.com"]
 
   spec.summary       = %q{Mountable Personal Messaging Engine for any Rails application.}
   spec.description   = %q{Mountable Personal Messaging Engine for any Rails application.}
-  spec.homepage      = "https://github.com/rails-engine/innbox"
+  spec.homepage      = "https://github.com/rails-engine/mails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

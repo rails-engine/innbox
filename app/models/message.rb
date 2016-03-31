@@ -1,6 +1,6 @@
-# Auto generate with innbox gem.
+# Auto generate with mails gem.
 class Message < ActiveRecord::Base
-  include Innbox::Model
+  include Mails::Model
 
   # Write your custom methods...
 end

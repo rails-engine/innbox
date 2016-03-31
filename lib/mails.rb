@@ -1,9 +1,9 @@
-require "innbox/model"
-require "innbox/engine"
-require "innbox/configuration"
-require "innbox/version"
+require "mails/model"
+require "mails/engine"
+require "mails/configuration"
+require "mails/version"
 
-module Innbox
+module Mails
   class << self
     def config
       return @config if defined?(@config)

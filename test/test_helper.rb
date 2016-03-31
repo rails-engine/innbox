@@ -10,7 +10,7 @@ if ENV['CI']=='true'
   SimpleCov.formatter = SimpleCov::Formatter::Codecov
 end
 SimpleCov.start 'rails' do
-  add_filter 'lib/innbox/version'
+  add_filter 'lib/mails/version'
   add_filter 'lib/generators'
 end
 

@@ -1,5 +1,5 @@
-module Innbox
+module Mails
   class Engine < ::Rails::Engine
-    isolate_namespace Innbox
+    isolate_namespace Mails
   end
 end

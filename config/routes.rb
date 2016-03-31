@@ -1,3 +1,3 @@
-Innbox::Engine.routes.draw do
+Mails::Engine.routes.draw do
   resources :messages
 end
