@@ -10,7 +10,7 @@ module Mails
         if File.exists?(path)
           puts "Skipping config/initializers/mails.rb creation, as file already exists!"
         else
-          puts "Adding Homeland initializer (config/initializers/mails.rb)..."
+          puts "Adding Mails initializer (config/initializers/mails.rb)..."
           template "config/initializers/mails.rb", path
         end
       end

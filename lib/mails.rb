@@ -2,6 +2,8 @@ require "mails/model"
 require "mails/engine"
 require "mails/configuration"
 require "mails/version"
+require 'will_paginate'
+require 'will_paginate/active_record'
 
 module Mails
   class << self

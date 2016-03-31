@@ -1,0 +1,24 @@
+zh-CN:
+  activerecord:
+    attributes:
+      message:
+        sender: 发件人
+        receiver: 收件人
+        body: 内容
+        body_html: 内容
+        read_at: 阅读于
+        deleted_at: 删除于
+        created_at: 发送于
+        updated_at: 更新于
+  mails:
+    pm_created: 短消息发送成功
+    submiting: '提交中，请稍后...'
+    submit: '提交'
+    cancel: '取消'
+    new: "新建"
+    edit: "修改"
+    delete: "删除"
+    reply: '回复'
+    nav:
+      pm: 短消息
+      new_pm: 发送消息

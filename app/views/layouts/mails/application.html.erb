@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mails</title>
+  <title><%= @page_title %></title>
   <%= stylesheet_link_tag    "mails/application", media: "all" %>
   <%= javascript_include_tag "mails/application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div class="main-layout">
+    <div class="container">
+      <%= notice_message %>
+
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

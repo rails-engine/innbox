@@ -1,4 +1,4 @@
-# mails
+# Mails
 
 Mountable Personal Messaging Engine for any Rails application.
 
@@ -28,15 +28,12 @@ You can also generate views and controller if you need to customize them:
 $ rails g mails:views
 $ rails g mails:controllers
 ```
-Then mount it in routes.rb
+
+Then mount it in routes.rb:
 
 ```ruby
 mount Mails::Engine, at: "/mails"
 ```
-
-## Usage
-
-TODO
 
 ## Development
 

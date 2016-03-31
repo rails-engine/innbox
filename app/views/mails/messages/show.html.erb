@@ -1,0 +1,20 @@
+<ol class="breadcrumb">
+  <li><a href="<%= mails.root_path %>"><%= t('mails.nav.home') %></a></li>
+  <li><a href="<%= mails.messages_path %>"><%= t('mails.nav.pm') %></a></li>
+  <li class="active"><%= @item.title %></li>
+</ol>
+
+<div class="row">
+  <div class="pm-detail col-lg-9">
+    <h1>
+      <%= @item.title %>
+    </h1>
+
+    <p><%= t('activerecord.attributes.message.sender') %>：<%= @item.sender.send(Mails.config.user_name_method) %></p>
+    <p><%= t('activerecord.attributes.message.created_at') %>：<%= l @item.created_at %></p>
+
+    <div class="pm-content">
+      <%= @item.body %>
+    </div>
+  </div>
+</div>

@@ -25,7 +25,7 @@ require 'minitest/mock'
 
 FactoryGirl.find_definitions
 
-# Homeland.configure do
+# Mails.configure do
 #   self.user_avatar_url_method = 'avatar_url'
 # end
 

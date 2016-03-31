@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      message:
+        sender: Sender
+        receiver: Receiver
+        body: Content
+        body_html: Content
+        read_at: Read At
+        deleted_at: Deleted At
+        created_at: Created At
+        updated_at: Updated At
+  mails:
+    pm_created: Message was successfully sent
+    submiting: 'Submiting...'
+    submit: 'Submit'
+    cancel: 'Cancel'
+    reply: 'Reply'
+    new: "New"
+    edit: "Edit"
+    delete: "Delete"
+    nav:
+      pm: Messages
+      new_pm: New Message
