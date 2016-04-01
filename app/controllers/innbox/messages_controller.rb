@@ -1,11 +1,12 @@
 module Innbox
   class MessagesController < ::Innbox::ApplicationController
+    before_action :authenticate_user!
     def index
       @items = Message.where(receiver_id: current_user.id).recent.includes(:sender).page(params[:page])
 
       set_seo_meta(t("innbox.nav.pm"))
     end
-    
+
     def new
       @item = Message.new
 
