@@ -1,15 +1,15 @@
-module Mails
-  class MessagesController < ::Mails::ApplicationController
+module Innbox
+  class MessagesController < ::Innbox::ApplicationController
     def index
       @items = Message.where(receiver_id: current_user.id).recent.includes(:sender).page(params[:page])
 
-      set_seo_meta(t("mails.nav.pm"))
+      set_seo_meta(t("innbox.nav.pm"))
     end
     
     def new
       @item = Message.new
 
-      set_seo_meta(t("mails.nav.new"))
+      set_seo_meta(t("innbox.nav.new"))
     end
 
     def show
@@ -17,7 +17,7 @@ module Mails
       @item ||= Message.find_by(id: params[:id], sender_id: current_user.id)
       @item.update_attribute(:read_at, Time.now)
       
-      set_seo_meta(t("mails.nav.pm"))
+      set_seo_meta(t("innbox.nav.pm"))
     end
 
     def create
@@ -25,7 +25,7 @@ module Mails
       @item.sender = current_user
 
       if @item.save
-        redirect_to(messages_path(), notice: t('mails.pm_created'))
+        redirect_to(messages_path(), notice: t('innbox.pm_created'))
       else
         render action: "new"
       end

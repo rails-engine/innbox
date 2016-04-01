@@ -10,7 +10,7 @@ zh-CN:
         deleted_at: 删除于
         created_at: 发送于
         updated_at: 更新于
-  mails:
+  innbox:
     pm_created: 短消息发送成功
     submiting: '提交中，请稍后...'
     submit: '提交'

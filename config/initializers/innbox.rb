@@ -1,5 +1,5 @@
-# mails Config
-Mails.configure do
+# innbox Config
+Innbox.configure do
   # Class name of you User model, default: 'User'
   # self.user_class = 'User'
 

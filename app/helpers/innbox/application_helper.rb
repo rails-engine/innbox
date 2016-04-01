@@ -1,4 +1,4 @@
-module Mails
+module Innbox
   module ApplicationHelper
     def render_errors(target)
       if target.errors.present?

@@ -1,9 +1,9 @@
 <ol class="breadcrumb">
-  <li><a href="<%= mails.root_path %>"><%= t('mails.nav.home') %></a></li>
-  <li class="active"><%= t('mails.nav.pm') %></li>
+  <li><a href="<%= innbox.root_path %>"><%= t('innbox.nav.home') %></a></li>
+  <li class="active"><%= t('innbox.nav.pm') %></li>
 </ol>
 
-<p><a class="btn btn-primary-outline" href="<%= mails.new_message_path %>"><i class="fa fa-plus"></i> <%= t('mails.nav.new_pm') %></a></p>
+<p><a class="btn btn-primary-outline" href="<%= innbox.new_message_path %>"><i class="fa fa-plus"></i> <%= t('innbox.nav.new_pm') %></a></p>
 
 <div class="pms">
   <table class="table">
@@ -19,7 +19,7 @@
         <tr>
           <th>
             <span class="text-mutted">
-              <%= t('mails.pms.empty') %>
+              <%= t('innbox.pms.empty') %>
             </span>
           </td>
         </tr>
@@ -27,10 +27,10 @@
         <% @items.each do |item| %>
           <tr class="pm">
             <td class="sender">
-              <%= item.sender.send(Mails.config.user_name_method) %>
+              <%= item.sender.send(Innbox.config.user_name_method) %>
             </td>
             <td class="title">
-              <%= link_to(item.title, mails.message_path(item)) %>
+              <%= link_to(item.title, innbox.message_path(item)) %>
             </td>
             <td class="activity">
               <%= timeago item.created_at %>

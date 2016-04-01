@@ -1,17 +1,17 @@
 require 'rails/generators'
-module Mails
+module Innbox
   module Generators
     class InstallGenerator < Rails::Generators::Base
-      desc "Create Mails's base files"
+      desc "Create Innbox's base files"
       source_root File.expand_path("../../../../", __FILE__)
 
       def add_initializer
-        path = "#{Rails.root}/config/initializers/mails.rb"
+        path = "#{Rails.root}/config/initializers/innbox.rb"
         if File.exists?(path)
-          puts "Skipping config/initializers/mails.rb creation, as file already exists!"
+          puts "Skipping config/initializers/innbox.rb creation, as file already exists!"
         else
-          puts "Adding Mails initializer (config/initializers/mails.rb)..."
-          template "config/initializers/mails.rb", path
+          puts "Adding Innbox initializer (config/initializers/innbox.rb)..."
+          template "config/initializers/innbox.rb", path
         end
       end
 
@@ -26,7 +26,7 @@ module Mails
       end
 
       def add_migrations
-        exec("rails mails:install:migrations")
+        exec("rails innbox:install:migrations")
       end
     end
   end

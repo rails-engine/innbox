@@ -10,7 +10,7 @@ en:
         deleted_at: Deleted At
         created_at: Created At
         updated_at: Updated At
-  mails:
+  innbox:
     pm_created: Message was successfully sent
     submiting: 'Submiting...'
     submit: 'Submit'

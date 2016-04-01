@@ -1,4 +1,4 @@
-module Mails
+module Innbox
   class Configuration
     # class name of you User model, default: 'User'
     attr_accessor :user_class

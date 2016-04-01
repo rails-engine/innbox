@@ -14,7 +14,7 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-  # Configure the class responsible to send e-mails.
+  # Configure the class responsible to send e-mail.
   # config.mailer = 'Devise::Mailer'
 
   # ==> ORM configuration
