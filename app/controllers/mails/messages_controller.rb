@@ -1,11 +1,12 @@
 module Mails
   class MessagesController < ::Mails::ApplicationController
+    before_action :authenticate_user!
     def index
       @items = Message.where(receiver_id: current_user.id).recent.includes(:sender).page(params[:page])
 
       set_seo_meta(t("mails.nav.pm"))
     end
-    
+
     def new
       @item = Message.new
 
@@ -16,7 +17,7 @@ module Mails
       @item = Message.find_by(id: params[:id], receiver_id: current_user.id)
       @item ||= Message.find_by(id: params[:id], sender_id: current_user.id)
       @item.update_attribute(:read_at, Time.now)
-      
+
       set_seo_meta(t("mails.nav.pm"))
     end
 
